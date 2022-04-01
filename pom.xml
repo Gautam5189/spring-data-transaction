@@ -13,6 +13,11 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.1</version>
+           <configuration>
+                    <compilerArgument>-Xlint:none</compilerArgument>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+               </configuration>
         <configuration>
           <compilerArgument>-Xlint:none</compilerArgument>
           <source>${java.version}</source>
@@ -114,9 +119,15 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+       $ clip < ~/.ssh/id_ed25519.pub>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+    <groupId> org.springframework</groupId>
+    <artifactId> spring-webmvc</artifactId>
+    <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.data</groupId>
@@ -128,6 +139,12 @@
       <artifactId>spring-retry</artifactId>
       <version>${spring.retry.version}</version>
     </dependency>
+    <dependency>
+    <groupId> org.springframework.data </groupId>
+    <artifactId> spring-retry </artifactId>
+    <version> ${spring.retry.version} </version>
+    </dependency>
+    
   </dependencies>
 
   <profiles>
