@@ -18,7 +18,7 @@
         <property name="defaultAutoCommit" value="false"/>
         <property name="defaultTransactionIsolation" value="READ_COMMITTED"/>
         <property name="driverClass" value="${database.driver}"/>
-        <property name="jdbcUrl" value="${database.url}"/>
+        <property name="jdbcUrl" value="${database.url.}"/>
         <property name="password" value="${database.password}"/>
         <property name="username" value="${database.user}"/>
         <property name="idleConnectionTestPeriodInSeconds" value="120"/>
@@ -37,14 +37,14 @@
         <property name="showSql" value="false"/>
       </bean>
     </property>
-    <property name="packagesToScan" value="org.example.domain"/>
+    <property name="packagesToScan" value="org.berlininsurance.domain"/>
   </bean>
 
   <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
     <property name="entityManagerFactory" ref="entityManagerFactory"/>
   </bean>
 
-  <jpa:repositories base-package="org.example.data"/>
+  <jpa:repositories base-package="org.berlininsurance.data"/>
 
   <transaction:annotation-driven/>
 </beans>
